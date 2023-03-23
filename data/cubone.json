@@ -1,0 +1,23 @@
+{
+  "name": "Cubone",
+  "description": "This Pokémon wears the skull of its deceased mother. Sometimes Cubone's dreams make it cry, but each tear Cubone sheds makes it stronger.",
+  "ability": "Rock head, Lightning Rod",
+  "image": "https://img.pokemondb.net/artwork/large/cubone.jpg",
+  "footprint": "https://archives.bulbagarden.net/media/upload/9/9c/F0104.png",
+  "dexindex": 104,
+  "type": "Ground",
+  "subtype": null,
+  "weaknesses": "Water, Grass, Ice",
+  "gender": "Male or Female",
+  "weight": 6500,
+  "height": 40,
+  "generation": 1,
+  "spilversion": "Red/Blue/Yellow/FireRed/LeafGreen/Gold/Silver/Ruby/Sapphire/Emerald/Diamond/Pearl/Platinum/Heartgold/Soulsilver/Black/White",
+  "canEvolve": true,
+  "statsHP": 5,
+  "statsAttack": 5,
+  "statsDefence": 9.5,
+  "statsSpecialAttack": 4.5,
+  "statsSpecialDefence": 5,
+  "statsSpeed": 3.5
+}
