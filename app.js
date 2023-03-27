@@ -5,8 +5,12 @@ window.addEventListener("load", initApp);
 async function initApp() {
   const cubone = await getCharacter("data/cubone.json");
   console.log(cubone);
-
   showPokemon(cubone);
+  const blaziken = await getCharacter(
+    "https://raw.githubusercontent.com/tora0001/pokemon-data/main/data/pokemon.json"
+  );
+  console.log(blaziken);
+  showPokemon(blaziken);
 }
 
 async function getCharacter(url) {
@@ -43,71 +47,32 @@ function showCharacterModal(character) {
 
   // Cacth Phrase and Name
   document.querySelector("#dialog-name").textContent = character.name;
-  document.querySelector(
-    "#dialog-quote"
-  ).textContent = `"${character.catchPhrase}"`;
-
   // Info
   dialog.querySelector("#dialog-nickname").textContent = character.description;
   dialog.querySelector("#dialog-occupation").textContent = character.ability;
   dialog.querySelector("#dialog-age").textContent = character.footprint;
-  dialog.querySelector("#dialog-gender").textContent = character.dexindex;
-  dialog.querySelector("#dialog-haircolor").textContent = character.type;
-  dialog.querySelector("#dialog-religion").textContent = character.subtype;
-  dialog.querySelector("#dialog-grade").textContent = character.weaknesses;
-  dialog.querySelector("#dialog-voicedby").textContent = character.gender;
+  dialog.querySelector("#dialog-dexindex").textContent = character.dexindex;
+  dialog.querySelector("#dialog-type").textContent = character.type;
+  dialog.querySelector("#dialog-subtype").textContent = character.subtype;
+  dialog.querySelector("#dialog-weaknesses").textContent = character.weaknesses;
+  dialog.querySelector("#dialog-gender").textContent = character.gender;
   dialog.querySelector("#dialog-episodes").textContent = character.weight;
   dialog.querySelector("#dialog-appearances").textContent = character.height;
-  dialog.querySelector("#dialog-firstappearance").textContent =
-    //   character.generation;
-    // dialog.querySelector("#dialog-haircolor").textContent = character.spilversion;
-    // dialog.querySelector("#dialog-haircolor").textContent = character.canEvolve;
-    // dialog.querySelector("#dialog-haircolor").textContent = character.statsHP;
-    // dialog.querySelector("#dialog-haircolor").textContent = character.statsAttack;
-    // dialog.querySelector("#dialog-haircolor").textContent =
-    //   character.statsdefense;
-    // dialog.querySelector("#dialog-haircolor").textContent =
-    //   character.statsSpecialAttack;
-    // dialog.querySelector("#dialog-haircolor").textContent =
-    //   character.statsSpecialDefense;
-    // dialog.querySelector("#dialog-haircolor").textContent = character.statsSpeed;
+  dialog.querySelector("#dialog-generation").textContent = character.generation;
+  dialog.querySelector("#dialog-spilVersion").textContent =
+    character.spilversion;
+  dialog.querySelector("#dialog-canEvolve").textContent = character.canEvolve;
+  dialog.querySelector("#dialog-statsHP").textContent = character.statsHP;
+  dialog.querySelector("#dialog-statsAttack").textContent =
+    character.statsAttack;
+  dialog.querySelector("#dialog-statsDefense").textContent =
+    character.statsDefence;
+  dialog.querySelector("#dialog-statsSpecialAttack").textContent =
+    character.statsSpecialAttack;
+  dialog.querySelector("#dialog-statsSpecialDefense").textContent =
+    character.statsSpecialDefence;
+  dialog.querySelector("#dialog-statsSpeed").textContent = character.statsSpeed;
 
-    // Show Dialog
-    document.querySelector("#dialog-character").showModal();
+  // Show Dialog
+  document.querySelector("#dialog-character").showModal();
 }
-
-// function showPokemon(pokemon) {
-//   const pokemonHTML = /*html*/ `
-//         <li><img src=${pokemon.image}></li>
-//         <li>Footprint: <img src=${pokemon.footprint}></li>
-//         <li>Name: ${pokemon.name}</li>
-//         <li>Description: ${pokemon.description}</li>
-//         <li>Ability: ${pokemon.ability}</li>
-//         <li>Pokédex index: #000${pokemon.dexindex}</li>
-//         <li>Type: ${pokemon.type}</li>
-//         <li>Subtype: ${pokemon.subtype}</li>
-//         <li>Weaknesses: ${pokemon.weaknesses}</li>
-//         <li>Gender: ${pokemon.gender}</li>
-//         <li>Weight: ${pokemon.weight} g</li>
-//         <li>Height: ${pokemon.height} cm</li>
-//         <li>Generation: ${pokemon.generation}</li>
-//         <li>Game version: ${pokemon.spilversion}</li>
-//         <li>Able to evolve: ${pokemon.canEvolve}</li>
-//         <li>HP: ${pokemon.statsHP}</li>
-//         <li>Attack: ${pokemon.statsAttack}</li>
-//         <li>Special attack: ${pokemon.statsSpecialAttack}</li>
-//         <li>Special defence: ${pokemon.statsSpecialDefence}</li>
-//         <li>Speed: ${pokemon.statsSpeed}</li> `;
-
-//   document
-//     .querySelector("#cubone-button")
-//     .addEventListener("click", characterClicked);
-
-//   function characterClicked() {
-//     console.log("yes");
-//     document
-//       .querySelector("#pokemonFacts")
-//       .insertAdjacentHTML("beforeend", pokemonHTML);
-//     document.querySelector("#dialog").showModal();
-//   }
-// }

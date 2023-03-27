@@ -3,26 +3,20 @@
 window.addEventListener("load", initApp);
 
 async function initApp() {
-  const harry = await getCharacter(
-    "https://raw.githubusercontent.com/cederdorff/dat-js/main/data/harry.json"
-  );
-  console.log(harry);
-
-  showCharacter(harry);
+  const students = await getStudent("data/students.json");
+  console.log(students);
 }
 
-async function getCharacter(url) {
+// function addStudent(student) {
+//   const list = document.querySelector("#student");
+//   list.insertAdjacentHTML(
+//     "beforeend",
+//     `<li>${student.firstName} ${student.lastName}</li>`
+//   );
+// }
+
+async function getStudent(url) {
   const response = await fetch(url);
   const data = await response.json();
   return data;
-}
-
-function showCharacter(character) {
-  const myHTML = /*html*/ `
-      <article>
-        <h2>${character.name}</h2>
-        <img src="${character.image}" alt="" />
-      </article>
-      `;
-  document.querySelector("body").insertAdjacentHTML("beforebegin", myHTML);
 }
