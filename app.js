@@ -3,14 +3,12 @@
 window.addEventListener("load", initApp);
 
 async function initApp() {
-  const cubone = await getCharacter("data/cubone.json");
-  console.log(cubone);
-  showPokemon(cubone);
-  const blaziken = await getCharacter(
-    "https://raw.githubusercontent.com/tora0001/pokemon-data/main/data/pokemon.json"
+  const pokemons = await getCharacter(
+    "https://cederdorff.github.io/dat-js/05-data/pokemons.json"
   );
-  console.log(blaziken);
-  showPokemon(blaziken);
+  for (const i of pokemons) {
+    showPokemon(i);
+  }
 }
 
 async function getCharacter(url) {
@@ -50,7 +48,7 @@ function showCharacterModal(character) {
   // Info
   dialog.querySelector("#dialog-nickname").textContent = character.description;
   dialog.querySelector("#dialog-occupation").textContent = character.ability;
-  dialog.querySelector("#dialog-age").textContent = character.footprint;
+  dialog.querySelector("#dialog-age").src = character.footprint;
   dialog.querySelector("#dialog-dexindex").textContent = character.dexindex;
   dialog.querySelector("#dialog-type").textContent = character.type;
   dialog.querySelector("#dialog-subtype").textContent = character.subtype;

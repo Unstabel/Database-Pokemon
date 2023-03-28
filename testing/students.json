@@ -1,0 +1,17 @@
+[
+  {
+    "firstName": "Harry",
+    "lastName": "Potter",
+    "middleName": "James"
+  },
+  {
+    "firstName": "Ron",
+    "lastName": "Weasley",
+    "middleName": "yes"
+  },
+  {
+    "firstName": "Hermoine",
+    "lastName": "Granger",
+    "middleName": "hello"
+  }
+]
