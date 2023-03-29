@@ -46,16 +46,17 @@ function showCharacterModal(character) {
   // Cacth Phrase and Name
   document.querySelector("#dialog-name").textContent = character.name;
   // Info
-  dialog.querySelector("#dialog-nickname").textContent = character.description;
-  dialog.querySelector("#dialog-occupation").textContent = character.ability;
-  dialog.querySelector("#dialog-age").src = character.footprint;
+  dialog.querySelector("#dialog-decription").textContent =
+    character.description;
+  dialog.querySelector("#dialog-ability").textContent = character.ability;
+  dialog.querySelector("#dialog-footprint").src = character.footprint;
   dialog.querySelector("#dialog-dexindex").textContent = character.dexindex;
   dialog.querySelector("#dialog-type").textContent = character.type;
   dialog.querySelector("#dialog-subtype").textContent = character.subtype;
   dialog.querySelector("#dialog-weaknesses").textContent = character.weaknesses;
   dialog.querySelector("#dialog-gender").textContent = character.gender;
-  dialog.querySelector("#dialog-episodes").textContent = character.weight;
-  dialog.querySelector("#dialog-appearances").textContent = character.height;
+  dialog.querySelector("#dialog-weight").textContent = character.weight;
+  dialog.querySelector("#dialog-height").textContent = character.height;
   dialog.querySelector("#dialog-generation").textContent = character.generation;
   dialog.querySelector("#dialog-spilVersion").textContent =
     character.spilversion;
