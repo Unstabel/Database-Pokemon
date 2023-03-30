@@ -21,15 +21,7 @@ html {
 body {
   margin: 0;
   font-size: 1.2em;
-  background-image: url(billede/South_park.png);
   background-position: 100%;
-}
-
-h1 {
-  font-size: 1.5em;
-  font-weight: 500;
-  letter-spacing: 0.1px;
-  text-align: center;
 }
 
 h2 {
@@ -97,16 +89,6 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1em;
   padding: 1em;
-}
-@media (min-width: 1200px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-@media (min-width: 1500px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
 }
 
 /* ---------- grid item styling ---------- */
@@ -202,9 +184,6 @@ dialog::backdrop {
   grid-template-columns: 1fr 1fr;
 }
 
-dialog h4 {
-  margin-bottom: 0;
-}
 dialog ul {
   margin: 0.5em 0 1em;
   padding-inline-start: 1.5em;
