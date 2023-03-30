@@ -40,12 +40,11 @@ function showPokemon(character) {
 function showCharacterModal(character) {
   console.log(character);
   const dialog = document.querySelector("#dialog-character");
-  // Image
+
   document.querySelector("#dialog-image").src = character.image;
 
-  // Cacth Phrase and Name
   document.querySelector("#dialog-name").textContent = character.name;
-  // Info
+
   dialog.querySelector("#dialog-decription").textContent =
     character.description;
   dialog.querySelector("#dialog-ability").textContent = character.ability;
